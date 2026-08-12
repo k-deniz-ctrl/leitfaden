@@ -23,19 +23,19 @@
     a{color:inherit;text-decoration:none}
     img{display:block;max-width:100%}
     .wrap{width:min(calc(100% - 40px),var(--max));margin-inline:auto}
-    .nav{position:fixed;inset:0 0 auto 0;z-index:20;background:rgba(244,241,234,.84);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .nav{position:absolute;inset:0 0 auto 0;z-index:20;background:transparent;border-bottom:1px solid rgba(255,255,255,.22);color:#fff}
     .nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{font-size:.95rem;font-weight:800;letter-spacing:.14em}
+    .brand{display:flex;align-items:center}.brand img{width:128px;height:62px;object-fit:contain;object-position:left center}
     .nav-links{display:flex;gap:26px;font-size:.9rem}
     .nav-links a{opacity:.74;transition:.2s ease}
     .nav-links a:hover{opacity:1}
-    .hero{min-height:100svh;padding:132px 0 54px;display:grid;align-items:end}
+    .hero{min-height:100svh;padding:132px 0 70px;display:grid;align-items:end;color:#fff;background:linear-gradient(90deg,rgba(8,8,8,.82),rgba(8,8,8,.48) 48%,rgba(8,8,8,.14)),url("leitfaden-hero.png") center/cover no-repeat}
     .hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:34px;align-items:end}
-    .eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin:0 0 22px}
+    .eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin:0 0 22px}.hero .eyebrow{color:rgba(255,255,255,.7)}
     h1,h2,h3,p{margin-top:0}
     h1{font-size:clamp(4rem,10vw,10rem);font-weight:650;line-height:.84;letter-spacing:-.07em;margin-bottom:28px;max-width:1000px}
-    .hero-copy{font-size:clamp(1.15rem,2vw,1.65rem);max-width:690px;color:#34332f;margin-bottom:0}
-    .hero-aside{border-top:1px solid var(--ink);padding-top:18px;color:var(--muted);font-size:.95rem;max-width:360px;justify-self:end}
+    .hero-copy{font-size:clamp(1.1rem,2vw,1.5rem);max-width:690px;color:rgba(255,255,255,.88);margin-bottom:0}
+    .hero-aside{border-top:1px solid rgba(255,255,255,.65);padding-top:18px;color:rgba(255,255,255,.75);font-size:.95rem;max-width:360px;justify-self:end}
     .scroll-cue{display:inline-flex;align-items:center;gap:10px;margin-top:34px;font-size:.82rem;text-transform:uppercase;letter-spacing:.12em}
     .scroll-cue span{width:34px;height:1px;background:currentColor;display:inline-block}
     section{padding:112px 0}
@@ -92,7 +92,7 @@
 <body>
   <header class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="#top" aria-label="LEITFADEN MEDIA Startseite">LEITFADEN MEDIA</a>
+      <a class="brand" href="#top" aria-label="LEITFADEN MEDIA Startseite"><img src="leitfaden-logo.png" alt="LEITFADEN MEDIA"></a>
       <nav class="nav-links" aria-label="Hauptnavigation">
         <a href="#projekte">Projekte</a>
         <a href="#team">Unser Team</a>
@@ -105,9 +105,9 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div>
-          <p class="eyebrow">Medien · Konzepte · Erlebnisse</p>
-          <h1>Wir geben Ideen Richtung.</h1>
-          <p class="hero-copy">LEITFADEN MEDIA entwickelt visuelle Auftritte, begleitet Veranstaltungen und schafft Erinnerungen, die bleiben.</p>
+          <p class="eyebrow">Events · Konzepte · Erinnerungen</p>
+          <h1>Momente.<br>Mit Sinn.<br>Perfekt geplant.</h1>
+          <p class="hero-copy">Wir planen und begleiten besondere Events, entwickeln klare Konzepte und schaffen Erinnerungen, die bleiben.</p>
           <a class="scroll-cue" href="#projekte"><span></span> Projekte ansehen</a>
         </div>
         <p class="hero-aside">Von der ersten Idee bis zum fertigen Bild: klar gedacht, persönlich begleitet und mit Blick fürs Detail umgesetzt.</p>
