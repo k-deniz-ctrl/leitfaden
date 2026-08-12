@@ -47,9 +47,6 @@
     .tags{display:flex;flex-wrap:wrap;gap:10px;align-content:start}
     .tag{border:1px solid rgba(255,255,255,.26);border-radius:999px;padding:10px 14px;font-size:.88rem;color:rgba(255,255,255,.86)}
     .acts{font-size:clamp(1.55rem,3vw,3rem);line-height:1.15;letter-spacing:-.03em;margin:10px 0 0;max-width:720px}
-    .liveacts-showcase{padding:0 0 94px;background:var(--paper)}
-    .liveacts-frame{width:min(calc(100% - 40px),1440px);margin-inline:auto;border-radius:26px;overflow:hidden;box-shadow:0 28px 70px rgba(38,31,20,.12);background:#f8f2e8}
-    .liveacts-frame img{width:100%;height:auto;display:block}
     .community{background:var(--paper)}
     .cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
     .cta{border-radius:var(--radius);padding:34px;min-height:310px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);background:var(--paper)}
@@ -58,16 +55,34 @@
     .cta p{max-width:530px;margin:0;color:var(--muted)}
     .cta.dark p{color:rgba(255,255,255,.65)}
     .button{display:inline-flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid currentColor;padding-top:16px;margin-top:32px;font-size:.82rem;text-transform:uppercase;letter-spacing:.12em}
+
+    .editorial{padding:108px 0}
+    .editorial.alt{background:var(--paper)}
+    .editorial-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:72px;align-items:start}
+    .editorial-kicker{font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin:0 0 18px}
+    .editorial-title{font-size:clamp(2.8rem,6vw,5.7rem);line-height:.94;letter-spacing:-.055em;margin:0;font-weight:640}
+    .editorial-copy{font-size:1.06rem;color:#373530;max-width:720px}
+    .editorial-copy p{margin:0 0 1.2em}
+    .feature-list{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);margin-top:34px}
+    .feature{padding:18px 20px 18px 0;border-bottom:1px solid var(--line)}
+    .feature:nth-child(even){padding-left:20px;border-left:1px solid var(--line)}
+    .feature small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+    .feature strong{font-size:1rem;font-weight:600}
+    .quote-band{background:var(--ink);color:#fff;padding:84px 0}
+    .quote-band .wrap{display:grid;grid-template-columns:.45fr 1.55fr;gap:70px;align-items:start}
+    .quote-band .eyebrow{color:rgba(255,255,255,.52)}
+    .quote-text{font-size:clamp(2rem,4.4vw,4.6rem);line-height:1.02;letter-spacing:-.045em;margin:0;max-width:1000px}
+    .partner-note{margin-top:28px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:.94rem}
+
     footer{padding:26px 0 42px;border-top:1px solid var(--line);color:var(--muted);font-size:.86rem}
     .footer-inner{display:flex;justify-content:space-between;gap:20px}
     @media(max-width:850px){
-      .two-col,.highlights-grid,.cta-grid{grid-template-columns:1fr}
+      .two-col,.highlights-grid,.cta-grid,.editorial-grid,.quote-band .wrap{grid-template-columns:1fr}
       .facts{grid-template-columns:1fr 1fr}
       .fact:nth-child(2){border-right:0}
       .fact:nth-child(3),.fact:nth-child(4){border-top:1px solid var(--line)}
       .hero{padding:72px 0 60px}
       section{padding:72px 0}
-      .liveacts-showcase{padding-bottom:72px}
     }
     @media(max-width:560px){
       .wrap{width:min(calc(100% - 28px),var(--max))}
@@ -76,7 +91,6 @@
       .facts{grid-template-columns:1fr}
       .fact,.fact:not(:first-child),.fact:last-child{padding:17px 0;border-right:0;border-top:1px solid var(--line)}
       .fact:first-child{border-top:0}
-      .liveacts-frame{width:calc(100% - 20px);border-radius:16px}
       .cta{padding:26px;min-height:280px}
       .footer-inner{flex-direction:column}
     }
@@ -154,14 +168,73 @@
           <h2>Schon bei uns auf der Bühne.</h2>
         </div>
         <div class="copy">
-          <p>Ein Highlight jeder Ausgabe ist unser Special Live Act. Gemeinsam mit Live-Band und DJ entstehen besondere Momente, die jede KADINLAR MATINESI einzigartig machen.</p>
+          <p>Ein Highlight jeder Ausgabe ist unser Special Live Act. In den vergangenen Jahren durften wir bereits <strong>Muhabbet, Kobra Murat, Lara und Tarik Mengüç</strong> bei KADINLAR MATINESI begrüßen.</p>
+          <p>Dazu begleiten euch unsere Live-Band und unser DJ durch den Tag – mit Musik, Spielen, Überraschungen und Momenten, die in Erinnerung bleiben.</p>
         </div>
       </div>
     </section>
 
-    <section class="liveacts-showcase" aria-label="Bisherige Special Live Acts">
-      <div class="liveacts-frame">
-        <img src="kadinlar-live-acts.png" alt="Bisherige Special Live Acts bei KADINLAR MATINESI: Muhabbet, Lara, Kobra Murat und Tarik Mengüç">
+
+    <section class="editorial">
+      <div class="wrap editorial-grid">
+        <div>
+          <p class="editorial-kicker">Erleben</p>
+          <h2 class="editorial-title">Musik, Spiele und ganz viel gemeinsame Zeit.</h2>
+        </div>
+        <div class="editorial-copy">
+          <p>Von der ersten Minute an soll sich KADINLAR MATINESI nach einem Tag anfühlen, den ihr euch ganz bewusst für euch nehmt. Unsere Live-Band, unser DJ, Spiele, Gewinnspiele und die Tombola begleiten euch durch den Tag.</p>
+          <p>Dazu kommen liebevoll gestaltete Foto-Spots, kleine Überraschungen und ein Special Live Act, der jede Ausgabe zu etwas Besonderem macht.</p>
+
+          <div class="feature-list">
+            <div class="feature"><small>Musik</small><strong>Live-Band & DJ</strong></div>
+            <div class="feature"><small>Entertainment</small><strong>Spiele & Gewinnspiele</strong></div>
+            <div class="feature"><small>Highlight</small><strong>Special Live Act</strong></div>
+            <div class="feature"><small>Momente</small><strong>Foto-Spots & Überraschungen</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="editorial alt">
+      <div class="wrap editorial-grid">
+        <div>
+          <p class="editorial-kicker">Entdecken</p>
+          <h2 class="editorial-title">Shopping, Beauty & Inspiration.</h2>
+        </div>
+        <div class="editorial-copy">
+          <p>Unsere Verkaufs- und Informationsstände gehören fest zum Erlebnis. Von Schmuck, Parfüm und Make-up bis zu Beauty-Behandlungen, Pilates, Technik, Wasserfiltern, Handyschmuck und besonderen Drinks gibt es bei jeder Ausgabe Neues zu entdecken.</p>
+          <p>Uns ist wichtig, dass ihr nicht nur zuschaut, sondern stöbern, ausprobieren, Fragen stellen und neue Lieblingsprodukte kennenlernen könnt.</p>
+
+          <div class="feature-list">
+            <div class="feature"><small>Beauty</small><strong>Make-up & Behandlungen</strong></div>
+            <div class="feature"><small>Lifestyle</small><strong>Schmuck & Parfüm</strong></div>
+            <div class="feature"><small>Inspiration</small><strong>Pilates & Wellness</strong></div>
+            <div class="feature"><small>Entdecken</small><strong>Marken & Angebote</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-band">
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">Unser Gefühl</p>
+        </div>
+        <p class="quote-text">Ihr seid nicht einfach Gäste. Ihr seid Teil eines Tages, an dem Frauen zusammenkommen, feiern, lachen und sich gegenseitig stärken.</p>
+      </div>
+    </section>
+
+    <section class="editorial">
+      <div class="wrap editorial-grid">
+        <div>
+          <p class="editorial-kicker">Partner & Sponsoren</p>
+          <h2 class="editorial-title">Mitten in einer starken Community sichtbar werden.</h2>
+        </div>
+        <div class="editorial-copy">
+          <p>KADINLAR MATINESI bietet Unternehmen, Marken und Selbstständigen die Möglichkeit, sich in einem persönlichen und lebendigen Umfeld zu präsentieren.</p>
+          <p>Ob Sponsoring, Verkaufsstand, Informationsstand, Produktplatzierung oder individuelle Kooperation – wir entwickeln gern gemeinsam ein Format, das zu euch und zu unserem Event passt.</p>
+          <p class="partner-note">Interesse an einer Partnerschaft? Über die Partneranfrage weiter unten könnt ihr uns direkt schreiben.</p>
+        </div>
       </div>
     </section>
 
@@ -173,7 +246,7 @@
             <h3>Beim nächsten Event dabei sein.</h3>
             <p>Tickets, Termine und aktuelle Informationen zu KADINLAR MATINESI veröffentlichen wir über unsere Instagram-Seite.</p>
           </div>
-          <a class="button" href="https://www.instagram.com/kadinlarmatine_nbg" target="_blank" rel="noopener noreferrer">
+          <a class="button" href="https://www.instagram.com/kadinlarmatines_nbg" target="_blank" rel="noopener noreferrer">
             Instagram öffnen <span>↗</span>
           </a>
         </article>
